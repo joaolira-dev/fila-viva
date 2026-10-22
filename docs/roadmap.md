@@ -9,7 +9,7 @@
 
 ## Etapa 2: qualidade e operação — em andamento
 
-- Pipeline de build e teste para backend e frontend no GitHub Actions (configurado; execução remota pendente de publicação no GitHub).
+- Pipeline de build e teste para backend e frontend no GitHub Actions (primeira execução aprovada em 22/10/2026).
 - OpenAPI, respostas de erro padronizadas e testes dos contratos HTTP.
 - Separar dados demonstrativos da configuração de produção.
 - Paginar consultas e medir o tempo de resposta da agenda.
