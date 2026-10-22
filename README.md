@@ -14,8 +14,22 @@ Uma pessoa escolhe uma atividade e um horário. A primeira reserva é confirmada
 
 ## Estado atual
 
-O esquema do banco e as entidades da agenda estão implementados. A API de reservas e a interface ainda precisam de validação integrada.
+A API de reservas está funcional e foi validada contra PostgreSQL. A interface React ainda está em construção.
 
 ## Banco local
 
 Execute `docker compose up -d postgres` na raiz do projeto. A instância de desenvolvimento fica disponível apenas em `localhost:55433`. As credenciais em `compose.yaml` são exclusivamente locais; use outras credenciais em qualquer ambiente publicado.
+
+## API
+
+Depois de iniciar o banco, execute `mvn spring-boot:run` dentro de `backend/`.
+
+| Método | Rota | Finalidade |
+| --- | --- | --- |
+| `GET` | `/api/activities` | Listar tipos de atendimento |
+| `GET` | `/api/slots` | Listar horários dos próximos 14 dias |
+| `POST` | `/api/bookings` | Reservar horário ou entrar na fila |
+| `GET` | `/api/bookings/{code}` | Consultar uma reserva pelo código |
+| `DELETE` | `/api/bookings/{code}` | Cancelar e promover a primeira pessoa da fila |
+
+Exemplo de corpo para `POST /api/bookings`: `{"slotId": 1, "guestName": "Pessoa de teste"}`. O código retornado funciona como acesso à reserva; não o publique. Nesta fase demonstrativa não há contas de usuário nem notificações.
