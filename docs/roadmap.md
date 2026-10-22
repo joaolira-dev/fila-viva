@@ -7,9 +7,9 @@
 - Interface responsiva para escolher, reservar, consultar e cancelar.
 - Teste de integração com PostgreSQL real via Testcontainers.
 
-## Etapa 2: qualidade e operação
+## Etapa 2: qualidade e operação — em andamento
 
-- Pipeline de build e teste para backend e frontend no GitHub Actions.
+- Pipeline de build e teste para backend e frontend no GitHub Actions (configurado; execução remota pendente de publicação no GitHub).
 - OpenAPI, respostas de erro padronizadas e testes dos contratos HTTP.
 - Separar dados demonstrativos da configuração de produção.
 - Paginar consultas e medir o tempo de resposta da agenda.
