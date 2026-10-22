@@ -2,6 +2,8 @@
 
 Plataforma de agendamentos com lista de espera. Projeto de estudo full stack, com evolução planejada para infraestrutura na AWS.
 
+O diferencial em relação a um agendador comum é o tratamento da disputa pelo mesmo horário e da promoção da fila. O projeto é independente do **ByAgenda**: aqui o foco é uma aplicação web com backend Java e regras de concorrência; o ByAgenda explora uma experiência móvel para estabelecimentos.
+
 ## Objetivo do produto
 
 Uma pessoa escolhe uma atividade e um horário. A primeira reserva é confirmada; as seguintes entram na fila. Quando a reserva confirmada é cancelada, a primeira pessoa da fila assume a vaga.
@@ -39,3 +41,7 @@ Exemplo de corpo para `POST /api/bookings`: `{"slotId": 1, "guestName": "Pessoa 
 Com o banco e a API em execução, rode `npm install` e `npm run dev` dentro de `frontend/`. Abra `http://localhost:5173`. O Vite encaminha as chamadas `/api` para `http://localhost:18080`. Em uma publicação com origens separadas, defina `VITE_API_URL` no build da interface e `CORS_ORIGIN` na API.
 
 Os horários de demonstração são gerados para os próximos 14 dias úteis, no fuso de Brasília. A interface guarda o código da reserva apenas no armazenamento local do navegador para permitir consulta e cancelamento.
+
+## Entenda as decisões
+
+Leia [arquitetura](docs/architecture.md) para ver o fluxo de reservas, a garantia de uma única vaga confirmada e os limites da versão atual. O [roteiro](docs/roadmap.md) descreve as próximas etapas, incluindo CI e AWS. Cada etapa é registrada em um commit próprio.
