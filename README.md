@@ -22,7 +22,7 @@ Execute `docker compose up -d postgres` na raiz do projeto. A instância de dese
 
 ## API
 
-Depois de iniciar o banco, execute `mvn spring-boot:run` dentro de `backend/`.
+Depois de iniciar o banco, execute `mvn spring-boot:run` dentro de `backend/`. A API responde em `http://localhost:18080`.
 
 | Método | Rota | Finalidade |
 | --- | --- | --- |
