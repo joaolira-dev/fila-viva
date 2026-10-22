@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/filaviva}
+    url: ${DB_URL:jdbc:postgresql://localhost:55433/filaviva}
     username: ${DB_USER:filaviva}
     password: ${DB_PASSWORD:filaviva}
   jpa:

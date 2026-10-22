@@ -15,3 +15,7 @@ Uma pessoa escolhe uma atividade e um horário. A primeira reserva é confirmada
 ## Estado atual
 
 O esquema do banco e as entidades da agenda estão implementados. A API de reservas e a interface ainda precisam de validação integrada.
+
+## Banco local
+
+Execute `docker compose up -d postgres` na raiz do projeto. A instância de desenvolvimento fica disponível apenas em `localhost:55433`. As credenciais em `compose.yaml` são exclusivamente locais; use outras credenciais em qualquer ambiente publicado.
